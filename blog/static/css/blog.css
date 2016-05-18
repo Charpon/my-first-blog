@@ -1,0 +1,103 @@
+.page-header {
+    background-color: #A4C95B;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #FFFFFF;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+.date {
+    color: #7FA337;
+    text-decoration: underline;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #7FA337;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
+
+.navbar-container {
+    padding: 20px 0 20px 0;
+}
+
+.navbar.navbar-fixed-top.fixed-theme {
+    background-color: #222;
+    border-color: #080808;
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
+}
+
+.navbar-brand.fixed-theme {
+    font-size: 18px;
+}
+
+.navbar-container.fixed-theme {
+    padding: 0;
+}
+
+.navbar-brand.fixed-theme, .navbar-container.fixed-theme, .navbar-brand,
+.navbar.navbar-fixed-top.fixed-theme, .navbar-container{
+    transition: 0.8s;
+    -webkit-transition:  0.8s;
+}
+
+#webname{
+	color: #FFFFFF;
+	font-family: 'Satisfy';
+}
+
+#header-container{
+    background: #C5E38A;
+    height: 70px;
+}
+
+body {
+    padding: 50px;
+    padding-top: 70px;
+	background: #C5E38A;
+}
+
+h1 a {
+    color: #7FA337;
+    font-family:'Satisfy';
+}
+
+h1 {
+    color: #7FA337;
+    font-family:'Satisfy';
+}
+
+h3 {
+    color:;
+    font-family: 'Satisfy';
+}
+
+p {
+    color: green;
+    font-family:'Satisfy';
+}
