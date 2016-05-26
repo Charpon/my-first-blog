@@ -66,6 +66,10 @@
     -webkit-transition:  0.8s;
 }
 
+.comment {
+    margin: 20px 0px 20px 20px;
+}
+
 #webname{
 	color: #FFFFFF;
 	font-family: 'Satisfy';
