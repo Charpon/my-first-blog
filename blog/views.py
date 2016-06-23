@@ -63,9 +63,6 @@ def post_remove(request, pk):
     post.delete()
     return redirect('blog.views.post_list')
 
-def contact(request):
-    return render(request, 'blog/base.html')
-
 def gallery(request):
     return render(request, 'blog/photo_gallery.html')
 

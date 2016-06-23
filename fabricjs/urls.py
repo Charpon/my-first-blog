@@ -15,16 +15,9 @@ Including another URLconf
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import patterns, include, url
-from django.contrib import admin
-import blog, fabricjs
-admin.autodiscover()
+import fabricjs.views
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'', include('blog.urls')),
-    url(r'', include('fabricjs.urls')),
-    url(r'^accounts/login/$', 'django.contrib.auth.views.login', name='login'),
-    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}, name='logout'),
-    url(r'^gallery/$', blog.views.gallery, name='gallery'),
+    url(r'^fabricjs/$', fabricjs.views.fabricjs, name='fabricjs'),
 ]
 
