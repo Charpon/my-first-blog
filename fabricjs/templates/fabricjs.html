@@ -46,24 +46,39 @@
 
     <!-- sidebar -->
     <div class="sidebar">
-      <div class="well" style="width:300px; padding: 8px 0;">
+      <div class="well">
         <ul class="nav nav-list"> 
-          <li class="nav-header">Main</li>        
-          <li class="active"><a href="index"><i class="icon-home"></i> Dashboard</a></li>
-          <li><a href="#"><i class="icon-edit"></i> Add Blog Post</a></li>
-          <li><a href="#"><i class="icon-calendar"></i> Calendar</a></li>
-          <li><a href="#"><i class="icon-user"></i> Members</a></li>
-          <li><a href="#"><i class="icon-comment"></i> Comments</a></li>
-          <li><a href="#"><i class="icon-picture"></i> Gallery</a></li>
+          <li>Canvas</li>        
+          <li><a>Color<input style="width:100px;" id="canvascolor" /></a></li>
+          <li>Brush</li>
+          <li><a>Type
+            <label for="drawing-mode-selector"></label>
+            <select id="drawing-mode-selector">
+              <option>Pencil</option>
+              <option>Circle</option>
+              <option>Spray</option>
+              <option>Pattern</option>
+              <option>hline</option>
+              <option>vline</option>
+              <option>square</option>
+              <option>diamond</option>
+              <option>texture</option>
+            </select></a></li>
+          <li><a for="drawing-line-width">Size
+            <input type="range" value="0" min="0" max="50" id="drawing-line-width">
+          </a></li>
+          <li><a>Color<input style="width:100px;" id="brushcolor" /></a></li>
+          <li>Eraser</li>
+          <li><a>Size</a></li>
+          <div id="eraser-slider"></div>
         </ul>
       </div>
     </div>
 
 
     <div>
-      <canvas style="left: -300px; border: 2px solid; " height="485" width="632" id="c"></canvas>
+      <canvas class="canvas" id="canvas"></canvas>
     </div>
-    <div id="slider"></div>
         <li style="margin-top:10px;">
           <button id="drawing-mode" class="btn btn-info">Enter drawing mode</button>
           <div style="display: none;" id="drawing-mode-options">
@@ -82,8 +97,6 @@
             </select><br>
             <label for="drawing-line-width">Line width:</label>
             <input type="range" value="30" min="0" max="150" id="drawing-line-width"><br>
-            <label for="drawing-color">Line color:</label>
-            <input type="color" value="#005E7A" id="drawing-color"><br>
             <label for="drawing-shadow-width">Line shadow width:</label>
             <input type="range" value="0" min="0" max="50" id="drawing-shadow-width"><br>
           </div>

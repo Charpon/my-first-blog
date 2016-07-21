@@ -1,15 +1,24 @@
 $(function() {
-    $( "#slider" ).slider();
+    $( "#brush-slider" ).slider();
+    $( "#eraser-slider" ).slider();
+    $( "#canvascolor" ).colorpicker();
+    $( "#brushcolor" ).colorpicker();
   });
 
-var canvas = new fabric.Canvas('c');
+var canvas = new fabric.Canvas('canvas');
+canvas.isDrawingMode = true;
 var drawingModeEl = document.getElementById('drawing-mode'),
       drawingOptionsEl = document.getElementById('drawing-mode-options'),
-      drawingColorEl = document.getElementById('drawing-color'),
+      drawingColorEl = document.getElementById('brushcolor'),
       drawingLineWidthEl = document.getElementById('drawing-line-width'),
       drawingShadowWidth = document.getElementById('drawing-shadow-width');
 
-  drawingModeEl.onclick = function() {
+if (canvas.isDrawingMode) {
+      drawingModeEl.innerHTML = 'Cancel drawing mode';
+      drawingOptionsEl.style.display = '';
+    }
+
+/*  drawingModeEl.onclick = function() {
     canvas.isDrawingMode = !canvas.isDrawingMode;
     if (canvas.isDrawingMode) {
       drawingModeEl.innerHTML = 'Cancel drawing mode';
@@ -19,7 +28,7 @@ var drawingModeEl = document.getElementById('drawing-mode'),
       drawingModeEl.innerHTML = 'Enter drawing mode';
       drawingOptionsEl.style.display = 'none';
     }
-  };
+  };*/
 
   canvas.on('path:created', function() {
     updateComplexity();
@@ -151,8 +160,9 @@ var drawingModeEl = document.getElementById('drawing-mode'),
     canvas.freeDrawingBrush.shadowBlur = 0;
   }
 
+
   // document.getElementById('canvas-background-picker').addEventListener('change', function() {
   //   canvas.backgroundColor = this.value;
   //   canvas.renderAll();
-  //});
+  //}); */
 
