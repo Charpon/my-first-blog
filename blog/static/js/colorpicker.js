@@ -69,12 +69,12 @@ $.widget( "evol.colorpicker", {
   version: '3.2.6',
   
   options: {
-    color: '#76923C', // example:'#31859B'
+    color: '#c3d69b', // example:'#31859B'
     customTheme: null, // example: ["#ff0000", "#00ff00", "blue"],
     showOn: 'both', // possible values: 'focus','button','both'
     hideButton: false,
     displayIndicator: true,
-    transparentColor: false,
+    transparentColor: true,
     history: true,
     defaultPalette: 'theme', // possible values: 'theme', 'web'
     strings: 'Theme Colors,Standard Colors,Web Colors,Theme Colors,Back to Palette,History,No history yet.'
