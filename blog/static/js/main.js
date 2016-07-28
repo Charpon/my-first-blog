@@ -5,11 +5,12 @@ $(function() {
     $( "#brushcolor" ).colorpicker();
   });
 
-var canvas = new fabric.Canvas('canvas');
+var canvas = new fabric.Canvas('mycanvas');
 canvas.isDrawingMode = true;
 var drawingModeEl = document.getElementById('drawing-mode'),
       drawingOptionsEl = document.getElementById('drawing-mode-options'),
       drawingColorEl = document.getElementById('brushcolor'),
+      canvasColorEl = document.getElementById('canvascolor'),
       drawingLineWidthEl = document.getElementById('drawing-line-width'),
       drawingShadowWidth = document.getElementById('drawing-shadow-width');
 
@@ -38,7 +39,7 @@ if (canvas.isDrawingMode) {
     var vLinePatternBrush = new fabric.PatternBrush(canvas);
     vLinePatternBrush.getPatternSrc = function() {
 
-      var patternCanvas = fabric.document.createElement('canvas');
+      var patternCanvas = fabric.document.createElement('mycanvas');
       patternCanvas.width = patternCanvas.height = 10;
       var ctx = patternCanvas.getContext('2d');
 
@@ -56,7 +57,7 @@ if (canvas.isDrawingMode) {
     var hLinePatternBrush = new fabric.PatternBrush(canvas);
     hLinePatternBrush.getPatternSrc = function() {
 
-      var patternCanvas = fabric.document.createElement('canvas');
+      var patternCanvas = fabric.document.createElement('mycanvas');
       patternCanvas.width = patternCanvas.height = 10;
       var ctx = patternCanvas.getContext('2d');
 
@@ -76,7 +77,7 @@ if (canvas.isDrawingMode) {
 
       var squareWidth = 10, squareDistance = 2;
 
-      var patternCanvas = fabric.document.createElement('canvas');
+      var patternCanvas = fabric.document.createElement('mycanvas');
       patternCanvas.width = patternCanvas.height = squareWidth + squareDistance;
       var ctx = patternCanvas.getContext('2d');
 
@@ -90,7 +91,7 @@ if (canvas.isDrawingMode) {
     diamondPatternBrush.getPatternSrc = function() {
 
       var squareWidth = 10, squareDistance = 5;
-      var patternCanvas = fabric.document.createElement('canvas');
+      var patternCanvas = fabric.document.createElement('mycanvas');
       var rect = new fabric.Rect({
         width: squareWidth,
         height: squareWidth,
@@ -144,6 +145,10 @@ if (canvas.isDrawingMode) {
     }
   });
 
+  canvasColorEl.onchange = function() {
+    canvas.backgroundColor = canvasColorEl.value;
+    canvas.renderAll();
+  };
   drawingColorEl.onchange = function() {
     canvas.freeDrawingBrush.color = drawingColorEl.value;
   };

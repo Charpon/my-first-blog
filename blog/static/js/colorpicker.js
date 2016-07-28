@@ -69,7 +69,7 @@ $.widget( "evol.colorpicker", {
   version: '3.2.6',
   
   options: {
-    color: '#000000', // example:'#31859B'
+    color: '#76923C', // example:'#31859B'
     customTheme: null, // example: ["#ff0000", "#00ff00", "blue"],
     showOn: 'both', // possible values: 'focus','button','both'
     hideButton: false,

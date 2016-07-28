@@ -63,40 +63,23 @@
               <option>square</option>
               <option>diamond</option>
               <option>texture</option>
+              <option>Eraser</option>
             </select></a></li>
           <li><a for="drawing-line-width">Size
             <input type="range" value="0" min="0" max="50" id="drawing-line-width">
           </a></li>
           <li><a>Color<input style="width:100px;" id="brushcolor" /></a></li>
-          <li>Eraser</li>
-          <li><a>Size</a></li>
-          <div id="eraser-slider"></div>
         </ul>
       </div>
     </div>
 
 
-    <div>
-      <canvas class="canvas" id="canvas"></canvas>
+    <div class="canvas-container">
+      <canvas class="mycanvas" id="mycanvas" height='600px' width='800px'></canvas>
     </div>
         <li style="margin-top:10px;">
           <button id="drawing-mode" class="btn btn-info">Enter drawing mode</button>
           <div style="display: none;" id="drawing-mode-options">
-            <label for="drawing-mode-selector">Mode:</label>
-            <select id="drawing-mode-selector">
-              <option>Pencil</option>
-              <option>Circle</option>
-              <option>Spray</option>
-              <option>Pattern</option>
-
-              <option>hline</option>
-              <option>vline</option>
-              <option>square</option>
-              <option>diamond</option>
-              <option>texture</option>
-            </select><br>
-            <label for="drawing-line-width">Line width:</label>
-            <input type="range" value="30" min="0" max="150" id="drawing-line-width"><br>
             <label for="drawing-shadow-width">Line shadow width:</label>
             <input type="range" value="0" min="0" max="50" id="drawing-shadow-width"><br>
           </div>

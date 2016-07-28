@@ -103,12 +103,12 @@
     width: 800px;
 }
 
-.canvas {
+.mycanvas {
     position: absolute;
     left: 100px;
-    border: 2px solid;
-    height: 600px;
-    width: 800px;
+    border: 2px solid #4F6128;
+    height: 600px !important;
+    width: 800px !important;
 }
 
 body {
