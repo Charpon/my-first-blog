@@ -31,15 +31,18 @@ if (canvas.isDrawingMode) {
     }
   };*/
 
-  canvas.on('path:created', function() {
-    updateComplexity();
-  });
+  //canvas.on('path:created', function() {
+    //updateComplexity();
+  //});
 
   if (fabric.PatternBrush) {
+    console.log("test");
     var vLinePatternBrush = new fabric.PatternBrush(canvas);
+    console.log("test");
     vLinePatternBrush.getPatternSrc = function() {
 
-      var patternCanvas = fabric.document.createElement('mycanvas');
+      var patternCanvas = fabric.document.createElement('canvas');
+      console.log(patternCanvas);
       patternCanvas.width = patternCanvas.height = 10;
       var ctx = patternCanvas.getContext('2d');
 
@@ -57,7 +60,7 @@ if (canvas.isDrawingMode) {
     var hLinePatternBrush = new fabric.PatternBrush(canvas);
     hLinePatternBrush.getPatternSrc = function() {
 
-      var patternCanvas = fabric.document.createElement('mycanvas');
+      var patternCanvas = fabric.document.createElement('canvas');
       patternCanvas.width = patternCanvas.height = 10;
       var ctx = patternCanvas.getContext('2d');
 
@@ -77,9 +80,10 @@ if (canvas.isDrawingMode) {
 
       var squareWidth = 10, squareDistance = 2;
 
-      var patternCanvas = fabric.document.createElement('mycanvas');
+      var patternCanvas = fabric.document.createElement('canvas');
       patternCanvas.width = patternCanvas.height = squareWidth + squareDistance;
       var ctx = patternCanvas.getContext('2d');
+      console.log(ctx);
 
       ctx.fillStyle = this.color;
       ctx.fillRect(0, 0, squareWidth, squareWidth);
@@ -91,7 +95,7 @@ if (canvas.isDrawingMode) {
     diamondPatternBrush.getPatternSrc = function() {
 
       var squareWidth = 10, squareDistance = 5;
-      var patternCanvas = fabric.document.createElement('mycanvas');
+      var patternCanvas = fabric.document.createElement('canvas');
       var rect = new fabric.Rect({
         width: squareWidth,
         height: squareWidth,
